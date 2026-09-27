@@ -1,13 +1,978 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-
     <meta charset="UTF-8">
-    <meta mane="viewport" content="width=device-width,initial-scale=1.0">
-    <title belajar github></title>
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sepatu SMAILK | Official Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #171717;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            height: 75px;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #171717;
+        }
+
+        .logo span {
+            color: #8b5cf6;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #8b5cf6;
+        }
+
+        .cart {
+            background: #171717;
+            color: white;
+            border: none;
+            padding: 11px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cart:hover {
+            background: #8b5cf6;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 600px;
+            background:
+                radial-gradient(circle at 80% 30%, #8b5cf6 0%, transparent 25%),
+                linear-gradient(135deg, #111 0%, #202020 60%, #171717 100%);
+
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            width: 1200px;
+            max-width: 100%;
+            margin: auto;
+            padding: 80px 25px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text small {
+            color: #a78bfa;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 0.95;
+            margin: 20px 0;
+        }
+
+        .hero-text h1 span {
+            color: #a78bfa;
+        }
+
+        .hero-text p {
+            color: #d4d4d4;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 550px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #7c3aed;
+        }
+
+        .btn-secondary {
+            border: 1px solid #555;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #111;
+        }
+
+        /* Sepatu utama */
+
+        .hero-shoe {
+            height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shoe-big {
+            width: 330px;
+            height: 180px;
+            background: linear-gradient(135deg, #fff, #d4d4d4);
+            border-radius: 70% 35% 25% 25%;
+            transform: rotate(-15deg);
+            position: relative;
+
+            box-shadow:
+                20px 30px 0 #8b5cf6,
+                0 35px 60px rgba(0,0,0,0.5);
+        }
+
+        .shoe-big::before {
+            content: "SMAILK";
+            position: absolute;
+            top: 70px;
+            left: 110px;
+            font-size: 28px;
+            font-weight: 900;
+            color: #171717;
+            letter-spacing: 2px;
+        }
+
+        .shoe-big::after {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 45px;
+            bottom: -20px;
+            left: -15px;
+            background: white;
+            border-radius: 30px;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title small {
+            color: #8b5cf6;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-box input:focus {
+            border-color: #8b5cf6;
+        }
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eeeeee;
+            position: relative;
+        }
+
+        .shoe {
+            width: 210px;
+            height: 105px;
+            border-radius: 60% 35% 25% 25%;
+            transform: rotate(-12deg);
+            position: relative;
+            box-shadow: 15px 20px 0 rgba(0,0,0,0.15);
+        }
+
+        .shoe::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: -5px;
+            width: 230px;
+            height: 28px;
+            border-radius: 20px;
+            background: white;
+        }
+
+        .shoe::before {
+            content: "S";
+            position: absolute;
+            left: 85px;
+            top: 30px;
+            font-size: 32px;
+            font-weight: 900;
+            z-index: 2;
+        }
+
+        .black {
+            background: linear-gradient(135deg, #333, #050505);
+        }
+
+        .black::before {
+            color: #a78bfa;
+        }
+
+        .white {
+            background: linear-gradient(135deg, #fff, #ccc);
+        }
+
+        .white::before {
+            color: #111;
+        }
+
+        .purple {
+            background: linear-gradient(135deg, #c4b5fd, #7c3aed);
+        }
+
+        .purple::before {
+            color: white;
+        }
+
+        .red {
+            background: linear-gradient(135deg, #fb7185, #be123c);
+        }
+
+        .red::before {
+            color: white;
+        }
+
+        .blue {
+            background: linear-gradient(135deg, #93c5fd, #2563eb);
+        }
+
+        .blue::before {
+            color: white;
+        }
+
+        .green {
+            background: linear-gradient(135deg, #86efac, #15803d);
+        }
+
+        .green::before {
+            color: white;
+        }
+
+        .product-info {
+            padding: 22px;
+        }
+
+        .product-info h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #171717;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .buy-btn:hover {
+            background: #8b5cf6;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #171717;
+            color: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 90px 25px;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .about-container h2 span {
+            color: #a78bfa;
+        }
+
+        .about-container p {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0c0c0c;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-shoe {
+                height: 250px;
+            }
+
+            .shoe-big {
+                transform: scale(0.75) rotate(-15deg);
+            }
+
+            .products {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .navbar {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .cart {
+                padding: 9px 13px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-     <hi>belajar github nih</hi>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+        <div class="navbar">
+
+            <div class="logo">
+                SMAIL<span>K</span>
+            </div>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#produk">Produk</a>
+                <a href="#tentang">Tentang</a>
+            </nav>
+
+            <button class="cart" onclick="lihatKeranjang()">
+                🛒 Keranjang (<span id="cartCount">0</span>)
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <small>OFFICIAL SMAILK STORE</small>
+
+                <h1>
+                    STEP INTO<br>
+                    <span>YOUR STYLE.</span>
+                </h1>
+
+                <p>
+                    Temukan sepatu dengan karakter kamu.
+                    SMAILK hadir untuk kamu yang ingin tampil
+                    berbeda, nyaman, dan percaya diri.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#produk" class="btn-primary">
+                        Belanja Sekarang
+                    </a>
+
+                    <a href="#tentang" class="btn-secondary">
+                        Tentang SMAILK
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-shoe">
+
+                <div class="shoe-big"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUK
+    ========================== -->
+
+    <section class="section" id="produk">
+
+        <div class="section-title">
+
+            <small>OUR COLLECTION</small>
+
+            <h2>Sepatu SMAILK</h2>
+
+            <p>
+                Pilih gaya favoritmu dan mulai melangkah.
+            </p>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Cari sepatu..."
+                onkeyup="cariProduk()"
+            >
+
+        </div>
+
+
+        <div class="products" id="productList">
+
+
+            <!-- PRODUK 1 -->
+
+            <div class="product" data-name="smailk urban black">
+
+                <div class="product-image">
+
+                    <div class="shoe black"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>SMAILK Urban Black</h3>
+
+                    <p>Casual • Everyday • Unisex</p>
+
+                    <div class="price">
+                        Rp399.000
+                    </div>
+
+                    <button class="buy-btn"
+                        onclick="tambahKeranjang('SMAILK Urban Black', 399000)">
+                        + Tambah Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 2 -->
+
+            <div class="product" data-name="smailk classic white">
+
+                <div class="product-image">
+
+                    <div class="shoe white"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>SMAILK Classic White</h3>
+
+                    <p>Clean • Simple • Unisex</p>
+
+                    <div class="price">
+                        Rp429.000
+                    </div>
+
+                    <button class="buy-btn"
+                        onclick="tambahKeranjang('SMAILK Classic White', 429000)">
+                        + Tambah Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 3 -->
+
+            <div class="product" data-name="smailk purple street">
+
+                <div class="product-image">
+
+                    <div class="shoe purple"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>SMAILK Purple Street</h3>
+
+                    <p>Streetwear • Bold • Trendy</p>
+
+                    <div class="price">
+                        Rp459.000
+                    </div>
+
+                    <button class="buy-btn"
+                        onclick="tambahKeranjang('SMAILK Purple Street', 459000)">
+                        + Tambah Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 4 -->
+
+            <div class="product" data-name="smailk red rush">
+
+                <div class="product-image">
+
+                    <div class="shoe red"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>SMAILK Red Rush</h3>
+
+                    <p>Sporty • Energetic • Bold</p>
+
+                    <div class="price">
+                        Rp479.000
+                    </div>
+
+                    <button class="buy-btn"
+                        onclick="tambahKeranjang('SMAILK Red Rush', 479000)">
+                        + Tambah Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 5 -->
+
+            <div class="product" data-name="smailk blue wave">
+
+                <div class="product-image">
+
+                    <div class="shoe blue"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>SMAILK Blue Wave</h3>
+
+                    <p>Sport • Running • Active</p>
+
+                    <div class="price">
+                        Rp499.000
+                    </div>
+
+                    <button class="buy-btn"
+                        onclick="tambahKeranjang('SMAILK Blue Wave', 499000)">
+                        + Tambah Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 6 -->
+
+            <div class="product" data-name="smailk green nature">
+
+                <div class="product-image">
+
+                    <div class="shoe green"></div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>SMAILK Green Nature</h3>
+
+                    <p>Outdoor • Casual • Comfortable</p>
+
+                    <div class="price">
+                        Rp449.000
+                    </div>
+
+                    <button class="buy-btn"
+                        onclick="tambahKeranjang('SMAILK Green Nature', 449000)">
+                        + Tambah Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TENTANG
+    ========================== -->
+
+    <section class="about" id="tentang">
+
+        <div class="about-container">
+
+            <h2>
+                Tentang <span>SMAILK</span>
+            </h2>
+
+            <p>
+                SMAILK adalah brand sepatu yang dibuat untuk
+                mereka yang berani menunjukkan gaya sendiri.
+                Kami percaya bahwa sepatu bukan hanya sesuatu
+                yang dipakai di kaki, tetapi bagian dari
+                identitas dan perjalanan setiap orang.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Walk your way. Be SMAILK.</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 <strong>SMAILK</strong>.
+            All Rights Reserved.
+        </p>
+
+        <p style="margin-top:10px;">
+            Official SMAILK Store
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        let jumlahKeranjang = 0;
+        let keranjang = [];
+
+
+        // TAMBAH PRODUK
+
+        function tambahKeranjang(nama, harga) {
+
+            jumlahKeranjang++;
+
+            keranjang.push({
+                nama: nama,
+                harga: harga
+            });
+
+            document.getElementById("cartCount").textContent =
+                jumlahKeranjang;
+
+            alert(
+                nama +
+                " berhasil ditambahkan ke keranjang! 🛒"
+            );
+        }
+
+
+        // LIHAT KERANJANG
+
+        function lihatKeranjang() {
+
+            if (keranjang.length === 0) {
+
+                alert("Keranjang kamu masih kosong 😄");
+
+                return;
+            }
+
+            let daftar = "";
+
+            let total = 0;
+
+            keranjang.forEach(function(item, index) {
+
+                daftar +=
+                    (index + 1) +
+                    ". " +
+                    item.nama +
+                    " - Rp" +
+                    item.harga.toLocaleString("id-ID") +
+                    "\n";
+
+                total += item.harga;
+
+            });
+
+            alert(
+                "🛒 KERANJANG SMAILK\n\n" +
+                daftar +
+                "\nTotal: Rp" +
+                total.toLocaleString("id-ID") +
+                "\n\nTerima kasih sudah berbelanja!"
+            );
+        }
+
+
+        // SEARCH PRODUK
+
+        function cariProduk() {
+
+            let input =
+                document
+                .getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            let products =
+                document.querySelectorAll(".product");
+
+
+            products.forEach(function(product) {
+
+                let nama =
+                    product
+                    .getAttribute("data-name")
+                    .toLowerCase();
+
+
+                if (nama.includes(input)) {
+
+                    product.style.display = "block";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
 </body>
-    </html>
+</html>
