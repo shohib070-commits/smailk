@@ -684,4 +684,11 @@
             .section-title h2 {
                 font-size: 32px;
             }
+               .cloudinary-steps {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
         }
