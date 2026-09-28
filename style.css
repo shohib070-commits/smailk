@@ -696,8 +696,8 @@
 ========================= */
 
 .product-image {
-    width: 70%;
-    height: 70px;
+    width: 50%;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -706,8 +706,8 @@
 }
 
 .product-image img {
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
