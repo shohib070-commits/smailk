@@ -1,1 +1,673 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Sepatu SMAILK | Official Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="header">
+        <div class="navbar">
+
+            <a href="#home" class="logo">
+                SMAIL<span>K</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#produk">Produk</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+
+            <button class="cart-button" onclick="lihatKeranjang()">
+                🛒 Keranjang
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <div class="hero-label">
+                        OFFICIAL SMAILK STORE
+                    </div>
+
+                    <h1>
+                        STEP INTO
+                        <span>YOUR STYLE.</span>
+                    </h1>
+
+                    <p>
+                        Temukan sepatu dengan karakter kamu.
+                        SMAILK hadir untuk kamu yang ingin tampil
+                        berbeda, nyaman, dan percaya diri.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#produk" class="btn-primary">
+                            Belanja Sekarang
+                        </a>
+
+                        <a href="#tentang" class="btn-secondary">
+                            Tentang SMAILK
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEPATU HERO -->
+
+                <div class="hero-shoe">
+
+                    <div class="hero-sneaker">
+
+                        <div class="hero-lace lace-1"></div>
+                        <div class="hero-lace lace-2"></div>
+                        <div class="hero-lace lace-3"></div>
+
+                        <div class="hero-logo">
+                            S
+                        </div>
+
+                        <div class="hero-sole"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUK
+        ========================== -->
+
+        <section class="products-section" id="produk">
+
+            <div class="section-title">
+
+                <span>OUR COLLECTION</span>
+
+                <h2>
+                    Sepatu SMAILK
+                </h2>
+
+                <p>
+                    Pilih gaya favoritmu dan mulai melangkah.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔎 Cari sepatu SMAILK..."
+                    onkeyup="cariProduk()"
+                >
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+
+            <div class="products" id="productList">
+
+
+                <!-- PRODUK 1 -->
+
+                <article
+                    class="product"
+                    data-name="smailk urban black"
+                >
+
+                    <div class="product-image">
+
+                        <div class="sneaker sneaker-black">
+
+                            <div class="shoe-upper"></div>
+
+                            <div class="shoe-laces">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="shoe-logo">
+                                S
+                            </div>
+
+                            <div class="shoe-sole"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>SMAILK Urban Black</h3>
+
+                        <p>
+                            Casual • Everyday • Unisex
+                        </p>
+
+                        <strong class="price">
+                            Rp399.000
+                        </strong>
+
+                        <button
+                            class="buy-btn"
+                            onclick="tambahKeranjang('SMAILK Urban Black', 399000)"
+                        >
+                            + Tambah Keranjang
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUK 2 -->
+
+                <article
+                    class="product"
+                    data-name="smailk classic white"
+                >
+
+                    <div class="product-image">
+
+                        <div class="sneaker sneaker-white">
+
+                            <div class="shoe-upper"></div>
+
+                            <div class="shoe-laces">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="shoe-logo">
+                                S
+                            </div>
+
+                            <div class="shoe-sole"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>SMAILK Classic White</h3>
+
+                        <p>
+                            Clean • Simple • Unisex
+                        </p>
+
+                        <strong class="price">
+                            Rp429.000
+                        </strong>
+
+                        <button
+                            class="buy-btn"
+                            onclick="tambahKeranjang('SMAILK Classic White', 429000)"
+                        >
+                            + Tambah Keranjang
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUK 3 -->
+
+                <article
+                    class="product"
+                    data-name="smailk purple street"
+                >
+
+                    <div class="product-image">
+
+                        <div class="sneaker sneaker-purple">
+
+                            <div class="shoe-upper"></div>
+
+                            <div class="shoe-laces">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="shoe-logo">
+                                S
+                            </div>
+
+                            <div class="shoe-sole"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>SMAILK Purple Street</h3>
+
+                        <p>
+                            Streetwear • Bold • Trendy
+                        </p>
+
+                        <strong class="price">
+                            Rp459.000
+                        </strong>
+
+                        <button
+                            class="buy-btn"
+                            onclick="tambahKeranjang('SMAILK Purple Street', 459000)"
+                        >
+                            + Tambah Keranjang
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUK 4 -->
+
+                <article
+                    class="product"
+                    data-name="smailk red rush"
+                >
+
+                    <div class="product-image">
+
+                        <div class="sneaker sneaker-red">
+
+                            <div class="shoe-upper"></div>
+
+                            <div class="shoe-laces">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="shoe-logo">
+                                S
+                            </div>
+
+                            <div class="shoe-sole"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>SMAILK Red Rush</h3>
+
+                        <p>
+                            Sporty • Energetic • Bold
+                        </p>
+
+                        <strong class="price">
+                            Rp479.000
+                        </strong>
+
+                        <button
+                            class="buy-btn"
+                            onclick="tambahKeranjang('SMAILK Red Rush', 479000)"
+                        >
+                            + Tambah Keranjang
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUK 5 -->
+
+                <article
+                    class="product"
+                    data-name="smailk blue wave"
+                >
+
+                    <div class="product-image">
+
+                        <div class="sneaker sneaker-blue">
+
+                            <div class="shoe-upper"></div>
+
+                            <div class="shoe-laces">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="shoe-logo">
+                                S
+                            </div>
+
+                            <div class="shoe-sole"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>SMAILK Blue Wave</h3>
+
+                        <p>
+                            Sport • Running • Active
+                        </p>
+
+                        <strong class="price">
+                            Rp499.000
+                        </strong>
+
+                        <button
+                            class="buy-btn"
+                            onclick="tambahKeranjang('SMAILK Blue Wave', 499000)"
+                        >
+                            + Tambah Keranjang
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUK 6 -->
+
+                <article
+                    class="product"
+                    data-name="smailk green nature"
+                >
+
+                    <div class="product-image">
+
+                        <div class="sneaker sneaker-green">
+
+                            <div class="shoe-upper"></div>
+
+                            <div class="shoe-laces">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="shoe-logo">
+                                S
+                            </div>
+
+                            <div class="shoe-sole"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>SMAILK Green Nature</h3>
+
+                        <p>
+                            Outdoor • Casual • Comfortable
+                        </p>
+
+                        <strong class="price">
+                            Rp449.000
+                        </strong>
+
+                        <button
+                            class="buy-btn"
+                            onclick="tambahKeranjang('SMAILK Green Nature', 449000)"
+                        >
+                            + Tambah Keranjang
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TENTANG
+        ========================== -->
+
+        <section class="about-section" id="tentang">
+
+            <div class="about-content">
+
+                <span>ABOUT THE BRAND</span>
+
+                <h2>
+                    Tentang
+                    <strong>SMAILK</strong>
+                </h2>
+
+                <p>
+                    SMAILK adalah brand sepatu yang dibuat untuk
+                    mereka yang berani menunjukkan gaya sendiri.
+                    Kami percaya bahwa sepatu bukan hanya sesuatu
+                    yang dipakai di kaki, tetapi bagian dari
+                    identitas dan perjalanan setiap orang.
+                </p>
+
+                <div class="slogan">
+                    Walk your way. Be SMAILK.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KONTAK
+        ========================== -->
+
+        <section class="contact-section" id="kontak">
+
+            <div class="contact-content">
+
+                <span>CONTACT SMAILK</span>
+
+                <h2>
+                    Siap tampil beda?
+                </h2>
+
+                <p>
+                    Hubungi SMAILK untuk informasi produk dan
+                    pemesanan.
+                </p>
+
+                <a
+                    href="https://wa.me/6280000000000"
+                    class="whatsapp-btn"
+                    target="_blank"
+                >
+                    💬 Hubungi via WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            SMAIL<span>K</span>
+        </h3>
+
+        <p>
+            Official Store
+        </p>
+
+        <small>
+            © 2026 SMAILK. All Rights Reserved.
+        </small>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        let jumlahKeranjang = 0;
+        let keranjang = [];
+
+
+        // =========================
+        // TAMBAH KERANJANG
+        // =========================
+
+        function tambahKeranjang(nama, harga) {
+
+            jumlahKeranjang++;
+
+            keranjang.push({
+                nama: nama,
+                harga: harga
+            });
+
+            document.getElementById("cartCount").textContent =
+                jumlahKeranjang;
+
+            alert(
+                nama +
+                " berhasil ditambahkan ke keranjang! 🛒"
+            );
+        }
+
+
+        // =========================
+        // LIHAT KERANJANG
+        // =========================
+
+        function lihatKeranjang() {
+
+            if (keranjang.length === 0) {
+
+                alert(
+                    "Keranjang SMAILK masih kosong 😄"
+                );
+
+                return;
+            }
+
+            let daftar = "";
+            let total = 0;
+
+            keranjang.forEach(function(item, index) {
+
+                daftar +=
+                    (index + 1) +
+                    ". " +
+                    item.nama +
+                    " - Rp" +
+                    item.harga.toLocaleString("id-ID") +
+                    "\n";
+
+                total += item.harga;
+
+            });
+
+            alert(
+                "🛒 KERANJANG SMAILK\n\n" +
+                daftar +
+                "\nTotal: Rp" +
+                total.toLocaleString("id-ID") +
+                "\n\nTerima kasih sudah berbelanja!"
+            );
+        }
+
+
+        // =========================
+        // SEARCH PRODUK
+        // =========================
+
+        function cariProduk() {
+
+            const input =
+                document
+                .getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            const products =
+                document.querySelectorAll(".product");
+
+
+            products.forEach(function(product) {
+
+                const nama =
+                    product
+                    .getAttribute("data-name")
+                    .toLowerCase();
+
+
+                if (nama.includes(input)) {
+
+                    product.style.display = "block";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
