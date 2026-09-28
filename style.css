@@ -716,11 +716,4 @@
 .product-image img:hover {
     transform: scale(1.05);
 }
-
-/* HP */
-@media (max-width: 600px) {
-    .product-image {
-        height: 220px;
-    }
-}
         }
