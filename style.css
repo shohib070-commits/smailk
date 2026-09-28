@@ -691,4 +691,42 @@
     display: block;
     margin: 30px auto;
 }
+               /* =========================
+   GAMBAR PRODUK SMAILK
+========================= */
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Kotak gambar produk */
+.product-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Khusus gambar Black */
+.product[data-name="smailk urban black"] .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Efek saat mouse diarahkan */
+.product[data-name="smailk urban black"] .product-image img {
+    transition: transform 0.3s ease;
+}
+
+.product[data-name="smailk urban black"]:hover .product-image img {
+    transform: scale(1.05);
+}
         }
